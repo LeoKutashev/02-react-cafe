@@ -9,10 +9,12 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/react": "^19.1.12",
     "typescript": "~5.8.3",
     "vite": "^7.1.2"
   },
   "dependencies": {
-    "modern-normalize": "^3.0.1"
+    "modern-normalize": "^3.0.1",
+    "react": "^19.1.1"
   }
 }
