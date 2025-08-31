@@ -1,12 +1,12 @@
 import style from './VoteOptions.module.scss';
-import type { VoteOption} from '../VoteType.ts';
+import type { VoteOption} from '../../types/VoteType.ts';
 interface VoteOptionsProps {
     onVote: (type: VoteOption) => void;
-    canResetVotes: boolean;
-    onResetVotes: () => void;
+    canReset: boolean;
+    onReset: () => void;
 }
 
-const VoteOptions = ({ onVote, canResetVotes, onResetVotes }: VoteOptionsProps) => {
+const VoteOptions = ({ onVote, canReset, onReset }: VoteOptionsProps) => {
     return (
         <div className={style.container}>
             <button 
@@ -33,11 +33,11 @@ const VoteOptions = ({ onVote, canResetVotes, onResetVotes }: VoteOptionsProps) 
                 Bad
             </button>
             
-            {canResetVotes && (
+            {canReset && (
                 <button
                     type="button"
                     className={`${style.button} ${style.reset}`}
-                    onClick={onResetVotes}
+                    onClick={onReset}
                 >
                     Reset
                 </button>

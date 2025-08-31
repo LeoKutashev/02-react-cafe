@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import styles from './App.module.css';
 import CafeInfo from "../CafeInfo/CafeInfo";
-import VoteOptions from "../VoteOptions/VoteOptions";
-import VoteStats from "../VoteStats/VoteStats";
-import Notification from "../Notificacion/Notificacion";
-import type { Vote, VoteOption } from "../VoteType.ts";
+import VoteOptions from "../VoteOptions/VoteOptions.tsx";
+import VoteStats from "../VoteStats/VoteStats.tsx";
+import Notification from "../Notificacion/Notificacion.tsx";
+import type { Vote, VoteOption } from "../../types/VoteType.ts";
 
 const App = () => {
     const [votes, setVotes] = useState<Vote>({ Good: 0, Neutral: 0, Bad: 0 });
@@ -20,7 +20,7 @@ const App = () => {
         <div className={styles.app}>
             <CafeInfo />
             <VoteOptions onVote={handleVote}
-            canResetVotes={totalVotes > 0} onResetVotes={resetVotes}
+            canReset={totalVotes > 0} onReset={resetVotes}
                 />
             {totalVotes === 0 ? (<VoteStats votes={votes} totalVotes={totalVotes} positivePercentage={positivePercentage} />) : (<Notification/>)}</div>);
 };
