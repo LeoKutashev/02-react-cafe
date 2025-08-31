@@ -1,6 +1,7 @@
+
 import { useState } from 'react';
 import styles from './App.module.css';
-import CafeInfo from "../CafeInfo/CafeInfo";
+import CafeInfo from "../CafeInfo/CafeInfo.tsx";
 import VoteOptions from "../VoteOptions/VoteOptions.tsx";
 import VoteStats from "../VoteStats/VoteStats.tsx";
 import Notification from "../Notificacion/Notificacion.tsx";
@@ -24,4 +25,5 @@ const App = () => {
                 />
             {totalVotes === 0 ? (<VoteStats votes={votes} totalVotes={totalVotes} positivePercentage={positivePercentage} />) : (<Notification/>)}</div>);
 };
+
 export default App;

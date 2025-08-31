@@ -1,4 +1,4 @@
-import style from './VoteStats.module.scss';
+import style from './VoteStats.module.css';
 import type { Vote } from '../../types/VoteType.ts';
 
 interface VoteStatsProps {votes: Vote; totalVotes: number; positivePercentage: number;}

@@ -1,4 +1,4 @@
-import style from "./Notification.module.css";
+import style from '../Notificacion/Notification.module.css';
 const Notification = () => {
     return (
         <div className={style.notification}>

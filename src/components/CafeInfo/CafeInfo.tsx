@@ -1,4 +1,4 @@
-import style from './CafeInfo.module.scss'; 
+import style from '../CafeInfo/CafeInfo.module.css'; 
 const CafeInfo = () => {
     return (
         <div className={style.cafeInfo}>   
