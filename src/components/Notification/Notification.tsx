@@ -2,7 +2,7 @@ import style from "./Notification.module.css";
 const Notification = () => {
   return (
     <div className={style.notification}>
-      <p className={style.message}>No votes yet</p>{" "}
+      <p className={style.message}>No feedback yet</p>{" "}
     </div>
   );
 };
