@@ -4,12 +4,12 @@ import CafeInfo from "../CafeInfo/CafeInfo.tsx";
 import VoteOptions from "../VoteOptions/VoteOptions.tsx";
 import VoteStats from "../VoteStats/VoteStats.tsx";
 import Notification from "../Notification/Notification.tsx";
-import type { Vote, VoteOption } from "../../types/votes.ts";
+import type { Vote, VoteType } from "../../types/votes.ts";
 
 const App = () => {
   const [votes, setVotes] = useState<Vote>({ Good: 0, Neutral: 0, Bad: 0 });
 
-  const handleVote = (type: VoteOption): void => {
+  const handleVote = (type: VoteType): void => {
     setVotes((prevVotes) => ({ ...prevVotes, [type]: prevVotes[type] + 1 }));
   };
   const totalVotes = votes.Good + votes.Neutral + votes.Bad;
