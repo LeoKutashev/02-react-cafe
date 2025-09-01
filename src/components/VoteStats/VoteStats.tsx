@@ -1,9 +1,17 @@
-import style from './VoteStats.module.css';
-import type { Vote } from '../../types/VoteType.ts';
+import style from "./VoteStats.module.css";
+import type { Vote } from "../../types/votes.ts";
 
-interface VoteStatsProps {votes: Vote; totalVotes: number; positivePercentage: number;}
+interface VoteStatsProps {
+  votes: Vote;
+  totalVotes: number;
+  positivePercentage: number;
+}
 
-const VoteStats = ({ votes, totalVotes, positivePercentage }: VoteStatsProps) => (
+const VoteStats = ({
+  votes,
+  totalVotes,
+  positivePercentage,
+}: VoteStatsProps) => (
   <div className={style.container}>
     <p className={style.stat}>
       Good: <strong>{votes.Good}</strong>
