@@ -12,7 +12,7 @@ const VoteOptions = ({ onVote, canReset, onReset }: VoteOptionsProps) => {
       <button
         type="button"
         className={style.button}
-        onClick={() => onVote("Good")}
+        onClick={() => onVote("good")}
       >
         Good
       </button>
@@ -20,7 +20,7 @@ const VoteOptions = ({ onVote, canReset, onReset }: VoteOptionsProps) => {
       <button
         type="button"
         className={style.button}
-        onClick={() => onVote("Neutral")}
+        onClick={() => onVote("neutral")}
       >
         Neutral
       </button>
@@ -28,7 +28,7 @@ const VoteOptions = ({ onVote, canReset, onReset }: VoteOptionsProps) => {
       <button
         type="button"
         className={style.button}
-        onClick={() => onVote("Bad")}
+        onClick={() => onVote("bad")}
       >
         Bad
       </button>
